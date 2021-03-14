@@ -1,0 +1,162 @@
+name: fitfans
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  simple_animations: ^1.3.3
+  page_transition: ^1.1.4
+
+  flutter_rating_bar: ^3.2.0+1
+  youtube_player_flutter: ^6.1.0+7
+  chewie: ^0.12.0   
+  url_launcher: ^5.7.10
+  bubble_bottom_bar: ^1.2.0
+  firebase_auth: ^0.20.1
+  firebase_core: ^0.7.0
+  cloud_firestore: ^0.16.0+1
+  
+  
+  
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+  flutter_launcher_icons: ^0.8.0
+
+flutter_icons:
+  image_path: "lib/icon/icon.png"  
+  android: true
+  ios: true
+  
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - lib/assets/simone.jpg
+    - lib/assets/1.png
+    - lib/assets/2.png
+    - lib/assets/3.png
+    - lib/assets/4.png
+    - lib/assets/5.png
+    - lib/assets/9.png
+    - lib/assets/10.png
+    - lib/assets/11.png
+    - lib/assets/12.png
+    - lib/assets/13.png
+    - lib/assets/14.png
+    - lib/assets/15.png
+    - lib/assets/16.png
+    - lib/assets/17.png
+    - lib/assets/18.png
+    - lib/assets/19.png
+    - lib/assets/20.png
+    - lib/assets/21.png
+    - lib/assets/yoga.jpg
+    
+    
+    - lib/assets/behappy.png
+    - lib/assets/food.png
+    - lib/assets/food1.png
+    - lib/assets/food2.png
+    - lib/assets/food3.png
+    - lib/assets/food4.png
+    - lib/assets/food5.png
+    
+    - lib/assets/moti1.png
+    - lib/assets/moti2.png
+    - lib/assets/moti3.png
+    - lib/assets/moti4.png
+    - lib/assets/moti5.png
+    - lib/assets/moti6.png
+    - lib/assets/moti7.png
+    - lib/assets/moti8.png
+    - lib/assets/moti9.png
+    - lib/assets/motiv10.png
+    - lib/assets/96.png
+    - lib/assets/moti11.png
+    - lib/assets/moti12.png
+    - lib/assets/moti13.png
+    - lib/assets/99.png
+    - lib/assets/0.png
+    - lib/assets/moti14.png
+    - lib/assets/94.png
+    - lib/assets/95.png
+    - lib/assets/93.png
+    - lib/assets/92.png
+    - lib/assets/91.png
+    - lib/assets/90.png
+    - lib/assets/89.png
+    - lib/assets/87.png
+    - lib/assets/85.png
+
+   
+    
+ 
+
+    
+    
+
+    
+   
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
