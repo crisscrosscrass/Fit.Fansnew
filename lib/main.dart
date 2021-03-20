@@ -146,19 +146,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                "Start Today",
-                                style: TextStyle(
-                                  fontSize: 40,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                       
                               SizedBox(height: 5),
-                              Text(
-                                "Training and Health with Fit.Fans",
-                                style: TextStyle(color: Colors.white),
-                              ),
+                         
                               TextButton(
                                 onPressed: () => Navigator.push(
                                   context,
@@ -181,7 +171,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                       "Start NOW",
                                       style: TextStyle(
                                         color: Colors.white,
-                                        fontSize: 20,
+                                        fontSize: 36,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
