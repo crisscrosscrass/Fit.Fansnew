@@ -2,14 +2,17 @@ import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitfans/Videos/video1.dart';
 import 'package:fitfans/constants.dart';
-
+import 'package:fitfans/pdf.dart';
 import 'package:fitfans/pl2_examplecard.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:fitfans/premiumcard.dart';
 import 'package:fitfans/videodrei.dart';
-
-
+import 'package:flutter_pdfview/flutter_pdfview.dart';
+import 'dart:io';
+import 'package:flutter/services.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:http/http.dart' as http;
 
 class PremiumBereich extends StatefulWidget {
   final User user;
@@ -21,12 +24,63 @@ class PremiumBereich extends StatefulWidget {
 
 class _PremiumBereichState extends State<PremiumBereich> {
   int currentIndex = 0;
-
+ 
   void changePage(int index) {
     setState(() {
       currentIndex = index;
     });
   }
+
+  String assetPDFPath = "";
+  String urlPDFPath = "";
+
+  @override
+  void initState() {
+    super.initState();
+
+    getFileFromAsset("lib/assets/1.pdf").then((f) {
+      setState(() {
+        assetPDFPath = f.path;
+        print(assetPDFPath);
+      });
+    });
+
+    getFileFromUrl("").then((f) {
+      setState(() {
+        urlPDFPath = f.path;
+        print(urlPDFPath);
+      });
+    });
+  }
+
+  Future<File> getFileFromAsset(String asset) async {
+    try {
+      var data = await rootBundle.load(asset);
+      var bytes = data.buffer.asUint8List();
+      var dir = await getApplicationDocumentsDirectory();
+      File file = File("${dir.path}/1.pdf");
+
+      File assetFile = await file.writeAsBytes(bytes);
+      return assetFile;
+    } catch (e) {
+      throw Exception("Error opening asset file");
+    }
+  }
+
+  Future<File> getFileFromUrl(String url) async {
+    try {
+      var data = await http.get(url);
+      var bytes = data.bodyBytes;
+      var dir = await getApplicationDocumentsDirectory();
+      File file = File("${dir.path}/1.pdf");
+
+      File urlFile = await file.writeAsBytes(bytes);
+      return urlFile;
+    } catch (e) {
+      throw Exception("Error opening url file");
+    }
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -195,7 +249,7 @@ class _PremiumBereichState extends State<PremiumBereich> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => VideoPage(),
+                      builder: (context) => PDFView(),
                     ),
                   );
                 },
@@ -269,13 +323,14 @@ class _PremiumBereichState extends State<PremiumBereich> {
                   ),
                 ]),
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => VideoPage(),
-                    ),
-                  );
-                },
+                        
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      PdfViewPage()));
+                        }
+                    
               ),
               SizedBox(height: 30,),
               InkWell(
@@ -520,13 +575,14 @@ class _PremiumBereichState extends State<PremiumBereich> {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VideoPage(),
-                      ),
-                    );
-                  },
+                        if (assetPDFPath != null) {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      PdfViewPage(path: assetPDFPath)));
+                        }
+                      },
                   child: Premiumcard(
                     title: "Gewichte",
                     image: "lib/assets/food4.png",
@@ -548,246 +604,7 @@ class _PremiumBereichState extends State<PremiumBereich> {
                     description: "Beschreibung des Videos",
                   ),
                 ),
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VideoPage(),
-                      ),
-                    );
-                  },
-                  child: Premiumcard(
-                    title: "Gewichte",
-                    image: "lib/assets/food4.png",
-                    description: "Beschreibung des Videos",
-                  ),
-                ),
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VideoPage(),
-                      ),
-                    );
-                  },
-                  child: Premiumcard(
-                    title: "Gewichte",
-                    image: "lib/assets/13.png",
-                    description: "Beschreibung des Videos",
-                  ),
-                ),
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VideoPage(),
-                      ),
-                    );
-                  },
-                  child: Premiumcard(
-                    title: "Gewichte",
-                    image: "lib/assets/13.png",
-                    description: "Beschreibung des Videos",
-                  ),
-                ),
-               InkWell (
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VideoPage(),
-                      ),
-                    );
-                  },
-                  child: Premiumcard(
-                    title: "Gewichte",
-                    image: "lib/assets/13.png",
-                    description: "Beschreibung des Videos",
-                  ),
-                ),
-                 InkWell (
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VideoPage(),
-                      ),
-                    );
-                  },
-                  child: Premiumcard(
-                    title: "Gewichte",
-                    image: "lib/assets/13.png",
-                    description: "Beschreibung des Videos",
-                  ),
-                ),
-                 InkWell (
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VideoPage(),
-                      ),
-                    );
-                  },
-                  child: Premiumcard(
-                    title: "Gewichte",
-                    image: "lib/assets/13.png",
-                    description: "Beschreibung des Videos",
-                  ),
-                ),
-                 InkWell (
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VideoPage(),
-                      ),
-                    );
-                  },
-                  child: Premiumcard(
-                    title: "Gewichte",
-                    image: "lib/assets/13.png",
-                    description: "Beschreibung des Videos",
-                  ),
-                ),
-                 InkWell (
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VideoPage(),
-                      ),
-                    );
-                  },
-                  child: Premiumcard(
-                    title: "Gewichte",
-                    image: "lib/assets/13.png",
-                    description: "Beschreibung des Videos",
-                  ),
-                ),
-                 InkWell (
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VideoPage(),
-                      ),
-                    );
-                  },
-                  child: Premiumcard(
-                    title: "Gewichte",
-                    image: "lib/assets/13.png",
-                    description: "Beschreibung des Videos",
-                  ),
-                ),
-                 InkWell (
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VideoPage(),
-                      ),
-                    );
-                  },
-                  child: Premiumcard(
-                    title: "Gewichte",
-                    image: "lib/assets/13.png",
-                    description: "Beschreibung des Videos",
-                  ),
-                ),
-                 InkWell (
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VideoPage(),
-                      ),
-                    );
-                  },
-                  child: Premiumcard(
-                    title: "Gewichte",
-                    image: "lib/assets/13.png",
-                    description: "Beschreibung des Videos",
-                  ),
-                ),
-                 InkWell (
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VideoPage(),
-                      ),
-                    );
-                  },
-                  child: Premiumcard(
-                    title: "Gewichte",
-                    image: "lib/assets/13.png",
-                    description: "Beschreibung des Videos",
-                  ),
-                ),
-                 InkWell (
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VideoPage(),
-                      ),
-                    );
-                  },
-                  child: Premiumcard(
-                    title: "Gewichte",
-                    image: "lib/assets/13.png",
-                    description: "Beschreibung des Videos",
-                  ),
-                ),
-                 InkWell (
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VideoPage(),
-                      ),
-                    );
-                  },
-                  child: Premiumcard(
-                    title: "Gewichte",
-                    image: "lib/assets/13.png",
-                    description: "Beschreibung des Videos",
-                  ),
-                ),
-                 InkWell (
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VideoPage(),
-                      ),
-                    );
-                  },
-                  child: Premiumcard(
-                    title: "Gewichte",
-                    image: "lib/assets/13.png",
-                    description: "Beschreibung des Videos",
-                  ),
-                ),
-                 InkWell (
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VideoPage(),
-                      ),
-                    );
-                  },
-                  child: Premiumcard(
-                    title: "Gewichte",
-                    image: "lib/assets/13.png",
-                    description: "Beschreibung des Videos",
-                  ),
-                ),
+                
                  InkWell (
                   onTap: () {
                     Navigator.push(

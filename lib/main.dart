@@ -1,6 +1,7 @@
 
 import 'package:fitfans/constants.dart';
 import 'package:fitfans/detailscreen.dart';
+import 'package:fitfans/homescreen.dart';
 
 import 'package:fitfans/premiumbereich.dart';
 import 'package:flutter/material.dart';
@@ -178,7 +179,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             onPressed: () => Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => DetailsTrain(),
+                builder: (context) => HomeScreen(),
               ),
             ),
             child: Container(
@@ -192,7 +193,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               width: MediaQuery.of(context).size.width * 0.7,
               child: Center(
                 child: Text(
-                  "Try now",
+                  "Start NOW",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
@@ -203,34 +204,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             ),
                       ),
                       SizedBox(height: 20),
-                      TextButton(
-                       
-            onPressed: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => PremiumBereich(),
-              ),
-            ),
-            child: Container(
-              decoration: BoxDecoration(
-                  color: Colors.transparent,
-                 borderRadius: BorderRadius.circular(25),
-                border: Border.all(width: 3, color: Colors.white),
-                  ),
-              height: 50,
-              width: MediaQuery.of(context).size.width * 0.7,
-              child: Center(
-                child: Text(
-                  "Login",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ),
-                      ),
+                      
                            
                             ],
                           ),
