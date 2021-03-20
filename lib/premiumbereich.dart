@@ -1,16 +1,15 @@
 import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitfans/Videos/video1.dart';
-
 import 'package:fitfans/constants.dart';
 
 import 'package:fitfans/pl2_examplecard.dart';
-
-
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:fitfans/premiumcard.dart';
 import 'package:fitfans/videodrei.dart';
 
-import 'package:flutter/material.dart';
+
 
 class PremiumBereich extends StatefulWidget {
   final User user;
@@ -869,7 +868,7 @@ class _PremiumBereichState extends State<PremiumBereich> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => VideoPage(),
+                        builder: (context) =>VideoPage () ,
                       ),
                     );
                   },
@@ -879,6 +878,8 @@ class _PremiumBereichState extends State<PremiumBereich> {
                     description: "Beschreibung des Videos",
                   ),
                 ),
+                
+                
               ],
             ),
           ),

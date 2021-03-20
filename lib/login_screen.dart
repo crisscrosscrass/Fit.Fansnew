@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitfans/constants.dart';
 import 'package:fitfans/premiumbereich.dart';
@@ -130,17 +132,18 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  RaisedButton(
-                      color: kFirstColor,
+                  ElevatedButton(
+                     
                       child: Container(
+                         color: kFirstColor,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25),
                             border: Border.all(width: 1, color: kFirstColor),
                           ),
                           height: 50,
                           width: MediaQuery.of(context).size.width * 0.7,
-                          child: Center(child: Text('Login'))),
-                       textColor: kThirdColor,
+                          child: Center(child: Text('Login',style: TextStyle(color:kThirdColor ),),)),
+                       
                       onPressed: () {
                         auth
                             .signInWithEmailAndPassword(
@@ -154,17 +157,18 @@ class _LoginScreenState extends State<LoginScreen> {
                   SizedBox(
                     height: 10,
                   ),
-                  RaisedButton(
-                      color: kFirstColor,
+                  ElevatedButton(
+                      
                       child: Container(
+                        color: kFirstColor,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(5),
                             border: Border.all(width: 1, color: kFirstColor),
                           ),
                           height: 50,
                           width: MediaQuery.of(context).size.width * 0.7,
-                          child: Center(child: Text('Registieren'))),
-                  textColor: kThirdColor,
+                          child: Center(child: Text('Registieren',style: TextStyle(color:kThirdColor),),)),
+                  
                       onPressed: () {
                         Navigator.of(context).pushReplacement(MaterialPageRoute(
                             builder: (context) => Register()));

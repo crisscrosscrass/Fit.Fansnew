@@ -78,7 +78,7 @@ class HomeScreen extends StatelessWidget {
             ),
                       ),
                       SizedBox(height: 60),
-                      FlatButton(
+                      TextButton(
             onPressed: () => Navigator.push(
               context,
               MaterialPageRoute(
@@ -116,7 +116,7 @@ class HomeScreen extends StatelessWidget {
             ),
                       ),
                       SizedBox(height: 20),
-                      FlatButton(
+                      TextButton(
             onPressed: () => Navigator.push(
               context,
               MaterialPageRoute(

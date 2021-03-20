@@ -207,7 +207,7 @@ class DetailsTrain extends StatelessWidget {
                         child: Column(
                           children: [
                             SizedBox(height: 20,),
-                             FlatButton(
+                             TextButton(
                               onPressed: () => Navigator.push(
                                   context,
                                   MaterialPageRoute(
@@ -244,7 +244,7 @@ class DetailsTrain extends StatelessWidget {
                               ),
                             ),
                             SizedBox(height: 12),
-                            FlatButton(
+                            TextButton(
                               onPressed: () => Navigator.push(
                                   context,
                                   MaterialPageRoute(

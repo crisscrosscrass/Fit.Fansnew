@@ -99,10 +99,11 @@ class _RegisterState extends State<Register> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  RaisedButton(
-                      color: kFirstColor,
+                  ElevatedButton(
+                      
                       child: Container(
                           decoration: BoxDecoration(
+                            color: kFirstColor,
                             borderRadius: BorderRadius.circular(25),
                             border: Border.all(width: 1, color: kFirstColor),
                           ),

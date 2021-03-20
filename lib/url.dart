@@ -19,13 +19,14 @@ class Url extends StatelessWidget {
           Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
-              
               child: Padding(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
                   child: Column(children: [
-                    SizedBox(
-                      height: 30,
+                    SingleChildScrollView(
+                      child: SizedBox(
+                        height: 30,
+                      ),
                     ),
                     RichText(
                       text: TextSpan(
@@ -65,12 +66,29 @@ class Url extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 50),
-                   RaisedButton(
-                        color: kFirstColor,
+                    ElevatedButton(
                         onPressed: _launchURL,
-                        
-                          
-                          
+                        child: Container(
+                          decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey,
+                                blurRadius:
+                                    2.0, // has the effect of softening the shadow
+                                spreadRadius:
+                                    2.0, // has the effect of extending the shadow
+                                offset: Offset(
+                                  5.0, // horizontal, move right 10
+                                  5.0, // vertical, move down 10
+                                ),
+                              )
+                            ],
+                            borderRadius: BorderRadius.circular(25),
+                            color: kFirstColor,
+                          ),
+                          height: 50,
+                          width: MediaQuery.of(context).size.width * 0.7,
+                          child: Center(
                             child: Text(
                               'Fit.Fans - Webseite',
                               style: TextStyle(
@@ -80,9 +98,10 @@ class Url extends StatelessWidget {
                               ),
                             ),
                           ),
-                        
-                      
-                    
+                        )),
+                    SizedBox(
+                      height: 30,
+                    )
                   ])))
         ]));
   }
