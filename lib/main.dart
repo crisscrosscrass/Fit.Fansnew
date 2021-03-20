@@ -1,9 +1,7 @@
-
 import 'package:fitfans/constants.dart';
-import 'package:fitfans/detailscreen.dart';
+
 import 'package:fitfans/homescreen.dart';
 
-import 'package:fitfans/premiumbereich.dart';
 import 'package:flutter/material.dart';
 
 import 'package:firebase_core/firebase_core.dart';
@@ -30,7 +28,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   PageController _pageController;
   int totalPage = 5;
 
-
   void _onScroll() {}
   @override
   void initState() {
@@ -46,8 +43,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     }
 
     _pageController = PageController(initialPage: 0);
-
-   
   }
 
   @override
@@ -72,28 +67,26 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             title: 'Ernährung',
           ),
           makePage(
-          page: 4, 
-          image: 'lib/assets/moti8.png', 
-          title: 'Find \nYour \nSelf'),
+              page: 4,
+              image: 'lib/assets/moti8.png',
+              title: 'Find \nYour \nSelf'),
           makePage(
-          page: 5, 
-          image: 'lib/assets/motiv10.png', 
-          title: '  Create \nBeautiful \nMoments'),
+              page: 5,
+              image: 'lib/assets/motiv10.png',
+              title: '  Create \nBeautiful \nMoments'),
         ],
       ),
     );
   }
 
   Widget makePage({image, title, page}) {
-    return Stack(
-          children:[ Container(
+    return Stack(children: [
+      Container(
           decoration: BoxDecoration(
               image:
                   DecorationImage(image: AssetImage(image), fit: BoxFit.cover)),
           child: Container(
-              decoration: BoxDecoration(
-              
-              ),
+              decoration: BoxDecoration(),
               child: Padding(
                   padding: EdgeInsets.all(40),
                   child: Column(
@@ -102,114 +95,104 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           crossAxisAlignment: CrossAxisAlignment.baseline,
-                      textBaseline: TextBaseline.alphabetic,
+                          textBaseline: TextBaseline.alphabetic,
                           children: <Widget>[
-                            
-                                Text(
-                                  page.toString(),
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 30,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Align(
-                            alignment: Alignment.topCenter,
-                            
-                                  child: 
                             Text(
-                              '/' + totalPage.toString(),
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 15),
-                            )
-                                 ) ],
+                              page.toString(),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            Align(
+                                alignment: Alignment.topCenter,
+                                child: Text(
+                                  '/' + totalPage.toString(),
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 15),
+                                ))
+                          ],
                         ),
                         Expanded(
                           child: SingleChildScrollView(
-                                                      child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                 RichText(
-                text: TextSpan(
-                  text: 'Simones\t',
-                  style: TextStyle(
-                      fontFamily: "Bebas", fontSize: 60,fontWeight: FontWeight.normal, letterSpacing: 5),
-                  children: <TextSpan>[
-                    TextSpan(
-                      text: 'Fit.Fans',
-                      style: TextStyle(color: kFirstColor),
-                    )
-                  ],
-                ),
-              ),
-                                
-
-
-
-
-
-                                SizedBox(
-                                  height: 170,
+                            child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  RichText(
+                                    text: TextSpan(
+                                      text: 'Simones\t',
+                                      style: TextStyle(
+                                          fontFamily: "Bebas",
+                                          fontSize: 60,
+                                          fontWeight: FontWeight.normal,
+                                          letterSpacing: 5),
+                                      children: <TextSpan>[
+                                        TextSpan(
+                                          text: 'Fit.Fans',
+                                          style: TextStyle(color: kFirstColor),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 170,
+                                  ),
+                                ]),
+                          ),
+                        ),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Start Today",
+                                style: TextStyle(
+                                  fontSize: 40,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
                                 ),
-                              
-                             
-                              ]),
-                          ),
                               ),
-                                  Align(
-                      alignment: Alignment.centerLeft,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Start Today",
-                            style: TextStyle(
-                              fontSize: 40,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          SizedBox(height: 5),
-                          Text(
-                            "Training and Health with Fit.Fans",
-                            style: TextStyle(color: Colors.white),
-                          ),
+                              SizedBox(height: 5),
+                              Text(
+                                "Training and Health with Fit.Fans",
+                                style: TextStyle(color: Colors.white),
+                              ),
                               TextButton(
-                           
-            onPressed: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => HomeScreen(),
-              ),
-            ),
-            child: Container(
-              decoration: BoxDecoration(
-     color: Colors.transparent,
-                borderRadius: BorderRadius.circular(25),
-                border: Border.all(width: 3, color: Colors.white),
-              
-              ),
-              height: 50,
-              width: MediaQuery.of(context).size.width * 0.7,
-              child: Center(
-                child: Text(
-                  "Start NOW",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ),
-                      ),
-                      SizedBox(height: 20),
-                      
-                           
+                                onPressed: () => Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => HomeScreen(),
+                                  ),
+                                ),
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.transparent,
+                                    borderRadius: BorderRadius.circular(25),
+                                    border: Border.all(
+                                        width: 3, color: Colors.white),
+                                  ),
+                                  height: 50,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.7,
+                                  child: Center(
+                                    child: Text(
+                                      "Start NOW",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(height: 20),
                             ],
                           ),
                         ),
-                      
-           ])) ))]);
+                      ]))))
+    ]);
   }
 }

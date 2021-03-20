@@ -20,7 +20,7 @@ class _PdfViewPageState extends State<PdfViewPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("My Document"),
+        title: Text("Ernährungs - Guide", style: TextStyle(fontWeight: FontWeight.bold),),
       ),
       body: Stack(
         children: <Widget>[
