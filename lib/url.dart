@@ -66,7 +66,7 @@ class Url extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 50),
-                    ElevatedButton(
+                    TextButton(
                         onPressed: _launchURL,
                         child: Container(
                           decoration: BoxDecoration(
@@ -84,7 +84,7 @@ class Url extends StatelessWidget {
                               )
                             ],
                             borderRadius: BorderRadius.circular(25),
-                            color: kFirstColor,
+                            color: Colors.white,
                           ),
                           height: 50,
                           width: MediaQuery.of(context).size.width * 0.7,
@@ -92,7 +92,7 @@ class Url extends StatelessWidget {
                             child: Text(
                               'Fit.Fans - Webseite',
                               style: TextStyle(
-                                color: Colors.white,
+                                color: kThirdColor,
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
                               ),

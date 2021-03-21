@@ -1,4 +1,7 @@
 
+import 'dart:ui';
+
+import 'package:fitfans/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
 
@@ -19,10 +22,10 @@ class _PdfViewPageState extends State<PdfViewPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar(  backgroundColor: kThirdColor,
         title: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Text("Ernährungs - Guide", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 27),),
+          child: Text("Ernährungs - Guide", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 27, color: Colors.white),),
         ),
       ),
       body: Stack(
@@ -64,7 +67,7 @@ class _PdfViewPageState extends State<PdfViewPage> {
           _currentPage > 0
               ? FloatingActionButton.extended(
                   backgroundColor: Colors.red,
-                  label: Text("Go to ${_currentPage - 1}"),
+                  label: Text("Go to ${_currentPage - 1}", style: TextStyle(color: Colors.white),),
                   onPressed: () {
                     _currentPage -= 1;
                     _pdfViewController.setPage(_currentPage);
@@ -73,8 +76,8 @@ class _PdfViewPageState extends State<PdfViewPage> {
               : Offstage(),
           _currentPage+1 < _totalPages
               ? FloatingActionButton.extended(
-                  backgroundColor: Colors.green,
-                  label: Text("Go to ${_currentPage + 1}"),
+                    backgroundColor: kThirdColor,
+                  label: Text("Go to ${_currentPage + 1}", style: TextStyle(color: Colors.white),),
                   onPressed: () {
                     _currentPage += 1;
                     _pdfViewController.setPage(_currentPage);

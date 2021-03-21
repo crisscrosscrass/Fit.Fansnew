@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitfans/Videos/video1.dart';
@@ -570,9 +572,8 @@ class _PremiumBereichState extends State<PremiumBereich> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Container(
-                  child: Center(child: Text("Ernährung")),
-                ),
+            
+                
                 InkWell(
                   onTap: () {
                         if (assetPDFPath != null) {
@@ -584,108 +585,19 @@ class _PremiumBereichState extends State<PremiumBereich> {
                         }
                       },
                   child: Premiumcard(
-                    title: "Gewichte",
-                    image: "lib/assets/food4.png",
-                    description: "Beschreibung des Videos",
+                    title: "Ernährungs Guide",
+                    image: "lib/assets/food.png",
+                    description: "  Ernährungs - Guide für deine   ausgewogene Ernährung. Nur durch die   richtige Ernährung erreichst du dein Ziel,   ob Abnehmen oder Muskelmasse   zulegen, die Ernährung ist das A.O.",
                   ),
                 ),
-                InkWell(
+             
+              
+                  InkWell(
                   onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => VideoPage(),
-                      ),
-                    );
-                  },
-                  child: Premiumcard(
-                    title: "Gewichte",
-                    image: "lib/assets/food4.png",
-                    description: "Beschreibung des Videos",
-                  ),
-                ),
-                
-                 InkWell (
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VideoPage(),
-                      ),
-                    );
-                  },
-                  child: Premiumcard(
-                    title: "Gewichte",
-                    image: "lib/assets/13.png",
-                    description: "Beschreibung des Videos",
-                  ),
-                ),
-                 InkWell (
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VideoPage(),
-                      ),
-                    );
-                  },
-                  child: Premiumcard(
-                    title: "Gewichte",
-                    image: "lib/assets/13.png",
-                    description: "Beschreibung des Videos",
-                  ),
-                ),
-                 InkWell (
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VideoPage(),
-                      ),
-                    );
-                  },
-                  child: Premiumcard(
-                    title: "Gewichte",
-                    image: "lib/assets/13.png",
-                    description: "Beschreibung des Videos",
-                  ),
-                ),
-                 InkWell (
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VideoPage(),
-                      ),
-                    );
-                  },
-                  child: Premiumcard(
-                    title: "Gewichte",
-                    image: "lib/assets/13.png",
-                    description: "Beschreibung des Videos",
-                  ),
-                ),
-                 InkWell (
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VideoPage(),
-                      ),
-                    );
-                  },
-                  child: Premiumcard(
-                    title: "Gewichte",
-                    image: "lib/assets/13.png",
-                    description: "Beschreibung des Videos",
-                  ),
-                ),
-                 InkWell (
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>VideoPage () ,
                       ),
                     );
                   },
@@ -697,7 +609,7 @@ class _PremiumBereichState extends State<PremiumBereich> {
                 ),
                 
                 
-              ],
+                ],
             ),
           ),
         ),
@@ -718,9 +630,9 @@ class _PremiumBereichState extends State<PremiumBereich> {
               ),
               activeIcon: Icon(
                 Icons.video_collection,
-                color: kFirstColor,
+                color: Colors.white,
               ),
-              title: Text("Videos")),
+              title: Text("Videos", style: TextStyle( color: Colors.white,),)),
           BubbleBottomBarItem(
               backgroundColor: kFirstColor,
               icon: Icon(
@@ -729,9 +641,9 @@ class _PremiumBereichState extends State<PremiumBereich> {
               ),
               activeIcon: Icon(
                 Icons.star,
-                color: kFirstColor,
+                color: Colors.white,
               ),
-              title: Text("Weights")),
+              title: Text("Weights", style: TextStyle( color: Colors.white,),)),
           BubbleBottomBarItem(
               backgroundColor: kFirstColor,
               icon: Icon(
@@ -740,9 +652,9 @@ class _PremiumBereichState extends State<PremiumBereich> {
               ),
               activeIcon: Icon(
                 Icons.folder_open,
-                color: kFirstColor,
+               color: Colors.white,
               ),
-              title: Text("Stretching")),
+              title: Text("Stretching", style: TextStyle( color: Colors.white,),)),
           BubbleBottomBarItem(
               backgroundColor: kFirstColor,
               icon: Icon(
@@ -751,9 +663,9 @@ class _PremiumBereichState extends State<PremiumBereich> {
               ),
               activeIcon: Icon(
                 Icons.menu,
-                color: Colors.green,
+               color: Colors.white,
               ),
-              title: Text("Food"))
+              title: Text("Food", style: TextStyle( color: Colors.white,),))
         ],
       ),
     );

@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         children: <Widget>[
           makePage(
             page: 1,
-            image: 'lib/assets/78.jpg',
+            image: 'lib/assets/77.png',
             title: 'FIT.FANS',
           ),
           makePage(
@@ -68,7 +68,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           ),
           makePage(
               page: 4,
-              image: 'lib/assets/moti8.png',
+              image: 'lib/assets/79.png',
               title: 'Find \nYour \nSelf'),
           makePage(
               page: 5,
@@ -119,22 +119,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: <Widget>[
-                                  RichText(
-                                    text: TextSpan(
-                                      text: 'Simones\t',
-                                      style: TextStyle(
-                                          fontFamily: "Bebas",
-                                          fontSize: 60,
-                                          fontWeight: FontWeight.normal,
-                                          letterSpacing: 5),
-                                      children: <TextSpan>[
-                                        TextSpan(
-                                          text: 'Fit.Fans',
-                                          style: TextStyle(color: kFirstColor),
-                                        )
-                                      ],
-                                    ),
-                                  ),
+                                
                                   SizedBox(
                                     height: 170,
                                   ),
@@ -158,6 +143,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                 ),
                                 child: Container(
                                   decoration: BoxDecoration(
+                                    
                                     color: Colors.transparent,
                                     borderRadius: BorderRadius.circular(25),
                                     border: Border.all(
@@ -171,7 +157,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                       "Start NOW",
                                       style: TextStyle(
                                         color: Colors.white,
-                                        fontSize: 36,
+                                        fontSize: 40,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),

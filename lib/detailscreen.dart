@@ -64,7 +64,7 @@ class DetailsTrain extends StatelessWidget {
         ),
       )
     ],
-                                            color: kFirstColor,
+                                            color: Colors.white,
                                             borderRadius:
                                                 BorderRadius.circular(20),
                                           ),
@@ -75,14 +75,14 @@ class DetailsTrain extends StatelessWidget {
                                               children: [
                                                 Icon(
                                                   Icons.access_time,
-                                                  color: Colors.white,
+                                                  color:  kThirdColor,
                                                   size: 20,
                                                 ),
                                                 Spacer(),
                                                 Text(
                                                   "3 Hours",
                                                   style: TextStyle(
-                                                      color: Colors.white,
+                                                    color: kThirdColor,
                                                       fontWeight:
                                                           FontWeight.bold),
                                                 )
@@ -226,9 +226,9 @@ class DetailsTrain extends StatelessWidget {
       )
     ],
                                   borderRadius: BorderRadius.circular(25),
-                                  color: kFirstColor,
+                                   color: Colors.white,
                                   border:
-                                      Border.all(width: 1, color: kFirstColor),
+                                      Border.all(width: 1,  color: Colors.grey,),
                                 ),
                                 height: 50,
                                 width: MediaQuery.of(context).size.width * 0.7,
@@ -263,7 +263,7 @@ class DetailsTrain extends StatelessWidget {
       )
     ],
                                   borderRadius: BorderRadius.circular(25),
-                                  color: kFirstColor,
+                                  color: Colors.white,
                                 ),
                                 height: 50,
                                 width: MediaQuery.of(context).size.width * 0.7,
@@ -284,7 +284,7 @@ class DetailsTrain extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 20,
+                        height: 50,
                       )
                     ],
                   ),

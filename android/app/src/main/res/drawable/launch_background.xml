@@ -8,6 +8,6 @@
         <bitmap
             
             
-            android:src="@drawable/a" />
+            android:src="@drawable/s1" />
     </item>
 </layer-list>

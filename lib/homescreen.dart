@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       SizedBox(
-            height: 30,
+            height: 10,
                       ),
                       RichText(
             text: TextSpan(
@@ -69,7 +69,7 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
                       ),
-                      SizedBox(height: 60),
+                      SizedBox(height: 50),
                       TextButton(
             onPressed: () => Navigator.push(
               context,
@@ -91,7 +91,7 @@ class HomeScreen extends StatelessWidget {
       )
     ],
                 borderRadius: BorderRadius.circular(25),
-                color: kFirstColor,
+                color: Colors.white,
               ),
               height: 50,
               width: MediaQuery.of(context).size.width * 0.7,
@@ -107,7 +107,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
                       ),
-                      SizedBox(height: 20),
+                      SizedBox(height: 10),
                       TextButton(
             onPressed: () => Navigator.push(
               context,
@@ -129,7 +129,7 @@ class HomeScreen extends StatelessWidget {
       )
     ],
                   borderRadius: BorderRadius.circular(25),
-                  color: kFirstColor,
+                   color: Colors.white,
                   ),
               height: 50,
               width: MediaQuery.of(context).size.width * 0.7,
@@ -145,7 +145,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
                       ),
-                     
+                     SizedBox(height: 70,),
         
                     ],
                   ),
