@@ -3,7 +3,8 @@ import 'dart:ui';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitfans/constants.dart';
 import 'package:fitfans/premiumbereich.dart';
-import 'package:fitfans/register.dart';
+
+import 'package:fitfans/url.dart';
 
 
 import 'package:flutter/material.dart';
@@ -29,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: MediaQuery.of(context).size.height * 0.55,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("lib/assets/5.png"),
+                      image: AssetImage("lib/assets/9.png"),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -132,16 +133,29 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  ElevatedButton(
+                  TextButton(
                      
                       child: Container(
-                         color: kFirstColor,
+                      
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25),
-                            border: Border.all(width: 1, color: kFirstColor),
-                          ),
-                          height: 50,
-                          width: MediaQuery.of(context).size.width * 0.7,
+                           boxShadow: [
+      BoxShadow(
+        color: Colors.grey,
+        blurRadius: 2.0, // has the effect of softening the shadow
+        spreadRadius: 2.0, // has the effect of extending the shadow
+        offset: Offset(
+          5.0, // horizontal, move right 10
+          5.0, // vertical, move down 10
+        ),
+      )
+    ],
+                 
+                   color: Colors.white,
+                  ),
+              height: 50,
+              width: MediaQuery.of(context).size.width * 0.7,
+                          
                           child: Center(child: Text('Login',style: TextStyle(color:kThirdColor ),),)),
                        
                       onPressed: () {
@@ -157,21 +171,35 @@ class _LoginScreenState extends State<LoginScreen> {
                   SizedBox(
                     height: 10,
                   ),
-                  ElevatedButton(
+                  TextButton(
                       
                       child: Container(
-                        color: kFirstColor,
+                    
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            border: Border.all(width: 1, color: kFirstColor),
-                          ),
-                          height: 50,
-                          width: MediaQuery.of(context).size.width * 0.7,
-                          child: Center(child: Text('Registieren',style: TextStyle(color:kThirdColor),),)),
+                           boxShadow: [
+      BoxShadow(
+        color: Colors.grey,
+        blurRadius: 2.0, // has the effect of softening the shadow
+        spreadRadius: 2.0, // has the effect of extending the shadow
+        offset: Offset(
+          5.0, // horizontal, move right 10
+          5.0, // vertical, move down 10
+        ),
+      )
+    ],
+                  borderRadius: BorderRadius.circular(25),
+                   color: Colors.white,
+                  ),
+              height: 50,
+              width: MediaQuery.of(context).size.width * 0.7,
+                          
+                       
+                         
+                          child: Center(child: Text('Webseite',style: TextStyle(color:kThirdColor),),)),
                   
                       onPressed: () {
                         Navigator.of(context).pushReplacement(MaterialPageRoute(
-                            builder: (context) => Register()));
+                            builder: (context) => Url()));
                       })
                 ],
               ),

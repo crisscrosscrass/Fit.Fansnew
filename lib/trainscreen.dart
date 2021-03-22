@@ -1,4 +1,6 @@
 
+import 'package:fitfans/foodies.dart';
+import 'package:fitfans/motivation.dart';
 import 'package:fitfans/pl2_examplecard.dart';
 import 'package:fitfans/pl_examplecard.dart';
 
@@ -189,15 +191,15 @@ class TrainScreen extends StatelessWidget {
                             GestureDetector(
                               child: Column(children: [
                                 ExampleCard(
-                                  title: "Bauch Workout",
-                                  image: "lib/assets/16.png",
+                                  title: "Ernährungs Tipps",
+                                  image: "lib/assets/food.png",
                                 ),
                               ]),
                               onTap: () {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => VideoPage(),
+                                    builder: (context) => Foodies(),
                                   ),
                                 );
                               },
@@ -205,51 +207,20 @@ class TrainScreen extends StatelessWidget {
                             GestureDetector(
                               child: Column(children: [
                                 ExampleCard(
-                                  title: "Bauch Workout",
-                                  image: "lib/assets/19.png",
+                                  title: "Motivation",
+                                  image: "lib/assets/moti1.png",
                                 ),
                               ]),
                               onTap: () {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => VideoPage(),
+                                    builder: (context) => Modies(),
                                   ),
                                 );
                               },
                             ),
-                            GestureDetector(
-                              child: Column(children: [
-                                ExampleCard(
-                                  title: "Bauch Workout",
-                                  image: "lib/assets/9.png",
-                                ),
-                              ]),
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => VideoPage(),
-                                  ),
-                                );
-                              },
-                            ),
-                            GestureDetector(
-                              child: Column(children: [
-                                ExampleCard(
-                                  title: "Bauch Workout",
-                                  image: "lib/assets/9.png",
-                                ),
-                              ]),
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => VideoPage(),
-                                  ),
-                                );
-                              },
-                            ),
+                           
                           ],
                         ),
                       )

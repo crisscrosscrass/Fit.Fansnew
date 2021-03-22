@@ -1,7 +1,11 @@
 
 import 'package:fitfans/detailscreen.dart';
 import 'package:fitfans/drawer.dart';
+import 'package:fitfans/login_screen.dart';
+
 import 'package:fitfans/premiumbereich.dart';
+import 'package:fitfans/trainscreen.dart';
+
 import 'package:flutter/material.dart';
 import './constants.dart';
 
@@ -112,7 +116,7 @@ class HomeScreen extends StatelessWidget {
             onPressed: () => Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => PremiumBereich(),
+                builder: (context) => LoginScreen(),
               ),
             ),
             child: Container(

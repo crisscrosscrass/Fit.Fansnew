@@ -112,8 +112,15 @@ flutter:
     - lib/assets/motiv10.png
     - lib/assets/96.png
     - lib/assets/moti11.png
+    - lib/assets/moti17.png
     - lib/assets/moti12.png
     - lib/assets/moti13.png
+    - lib/assets/moti18.png
+    - lib/assets/moti19.png
+    
+
+    
+
     - lib/assets/99.png
     - lib/assets/0.png
     - lib/assets/moti14.png

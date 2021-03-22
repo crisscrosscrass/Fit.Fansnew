@@ -3,9 +3,14 @@ import 'dart:ui';
 import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitfans/Videos/video1.dart';
+import 'package:fitfans/Videos/video10.dart';
+import 'package:fitfans/Videos/video2.dart';
+import 'package:fitfans/Videos/video20.dart';
 import 'package:fitfans/constants.dart';
+import 'package:fitfans/foodies.dart';
 import 'package:fitfans/pdf.dart';
 import 'package:fitfans/pl2_examplecard.dart';
+import 'package:fitfans/pl_examplecard.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:fitfans/premiumcard.dart';
@@ -15,6 +20,8 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:http/http.dart' as http;
+
+import 'motivation.dart';
 
 class PremiumBereich extends StatefulWidget {
   final User user;
@@ -161,7 +168,7 @@ class _PremiumBereichState extends State<PremiumBereich> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => PlayList2(),
+                      builder: (context) => Video2Page(),
                     ),
                   );
                 },
@@ -493,7 +500,22 @@ class _PremiumBereichState extends State<PremiumBereich> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => VideoPage(),
+                        builder: (context) => PlayList(),
+                      ),
+                    );
+                  },
+                  child: Premiumcard(
+                    title: "Gewichte",
+                    image: "lib/assets/13.png",
+                    description: "Beschreibung des Videos",
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => PlayList2(),
                       ),
                     );
                   },
@@ -513,7 +535,7 @@ class _PremiumBereichState extends State<PremiumBereich> {
                     );
                   },
                   child: Premiumcard(
-                    title: "Gewichte",
+                    title: "Warm up",
                     image: "lib/assets/13.png",
                     description: "Beschreibung des Videos",
                   ),
@@ -523,14 +545,14 @@ class _PremiumBereichState extends State<PremiumBereich> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => VideoPage(),
+                        builder: (context) => Foodies(),
                       ),
                     );
                   },
                   child: Premiumcard(
-                    title: "Gewichte",
+                    title: "Ernährungs Tipps",
                     image: "lib/assets/13.png",
-                    description: "Beschreibung des Videos",
+                    description: "Kurze und wichtige Tipps zur Ernährung",
                   ),
                 ),
                 InkWell(
@@ -538,29 +560,14 @@ class _PremiumBereichState extends State<PremiumBereich> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => VideoPage(),
+                        builder: (context) => Modies(),
                       ),
                     );
                   },
                   child: Premiumcard(
-                    title: "Gewichte",
+                    title: "Motivation",
                     image: "lib/assets/13.png",
-                    description: "Beschreibung des Videos",
-                  ),
-                ),
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VideoPage(),
-                      ),
-                    );
-                  },
-                  child: Premiumcard(
-                    title: "Gewichte",
-                    image: "lib/assets/13.png",
-                    description: "Beschreibung des Videos",
+                    description: "Motivationstipps, genießen den Augenblick, sei mutig, never stop learning, sei kreativ und finde dich selbst",
                   ),
                 ),
               ],
@@ -654,7 +661,7 @@ class _PremiumBereichState extends State<PremiumBereich> {
                 Icons.folder_open,
                color: Colors.white,
               ),
-              title: Text("Stretching", style: TextStyle( color: Colors.white,),)),
+              title: Text("Free", style: TextStyle( color: Colors.white,),)),
           BubbleBottomBarItem(
               backgroundColor: kFirstColor,
               icon: Icon(

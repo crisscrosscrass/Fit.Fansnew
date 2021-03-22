@@ -36,8 +36,8 @@ class _ModiesState extends State<Modies> with SingleTickerProviderStateMixin {
         children: <Widget>[
           makePage(
               page: 1,
-              image: 'lib/assets/moti11.png',
-              title: 'Be HAPPY',
+              image: 'lib/assets/moti1.png',
+              title: 'Think Outside the Box',
               description:
                   'Yosemite National Park is in California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoia trees, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.'),
           makePage(
@@ -54,25 +54,25 @@ class _ModiesState extends State<Modies> with SingleTickerProviderStateMixin {
                   "Sedona is regularly described as one of America's most beautiful places. Nowhere else will you find a landscape as dramatically colorful."),
           makePage(
               page: 4,
-              image: 'lib/assets/moti6.png',
-              title: 'Leidenschaft',
+              image: 'lib/assets/moti18.png',
+              title: 'Folge deine Leidenschaft',
               description:
                   "Savannah, with its Spanish moss, Southern accents and creepy graveyards, is a lot like Charleston, South Carolina. But this city about 100 miles to the south has an eccentric streak."),
           makePage(
               page: 5,
-              image: 'lib/assets/moti7.png',
+              image: 'lib/assets/moti12.png',
               title: 'Ausdauer',
               description:
                   "Savannah, with its Spanish moss, Southern accents and creepy graveyards, is a lot like Charleston, South Carolina. But this city about 100 miles to the south has an eccentric streak."),
           makePage(
               page: 6,
-              image: 'lib/assets/moti4.png',
+              image: 'lib/assets/moti17.png',
               title: 'Good Vibes',
               description:
                   "Savannah, with its Spanish moss, Southern accents and creepy graveyards, is a lot like Charleston, South Carolina. But this city about 100 miles to the south has an eccentric streak."),
           makePage(
               page: 7,
-              image: 'lib/assets/moti2.png',
+              image: 'lib/assets/moti19.png',
               title: 'Reisen',
               description:
                   "Savannah, with its Spanish moss, Southern accents and creepy graveyards, is a lot like Charleston, South Carolina. But this city about 100 miles to the south has an eccentric streak."),
@@ -85,7 +85,7 @@ class _ModiesState extends State<Modies> with SingleTickerProviderStateMixin {
           makePage(
               page: 9,
               image: 'lib/assets/moti9.png',
-              title: 'Gemeinsamkeit',
+              title: 'genieße den Moment',
               description:
                   "Savannah, with its Spanish moss, Southern accents and creepy graveyards, is a lot like Charleston, South Carolina. But this city about 100 miles to the south has an eccentric streak."),
           makePage(
@@ -142,7 +142,7 @@ class _ModiesState extends State<Modies> with SingleTickerProviderStateMixin {
                 ),
                 Expanded(
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       FadeAnimation(
