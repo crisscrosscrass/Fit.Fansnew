@@ -3,9 +3,9 @@ import 'dart:ui';
 import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitfans/Videos/video1.dart';
-import 'package:fitfans/Videos/video10.dart';
+
 import 'package:fitfans/Videos/video2.dart';
-import 'package:fitfans/Videos/video20.dart';
+
 import 'package:fitfans/constants.dart';
 import 'package:fitfans/foodies.dart';
 import 'package:fitfans/pdf.dart';
@@ -141,7 +141,7 @@ class _PremiumBereichState extends State<PremiumBereich> {
               InkWell(
                 child: Column(children: [
                   Premiumcard(
-                    title: "Challenges",
+                    title: "Tag 1",
                     image: "lib/assets/17.png",
                      description: "Beschreibung des Videos",
                   ),
@@ -159,7 +159,7 @@ class _PremiumBereichState extends State<PremiumBereich> {
               InkWell(
                 child: Column(children: [
                   Premiumcard(
-                    title: "ABS & Core",
+                    title: "Tag 2",
                     image: "lib/assets/food.png",
                      description: "Beschreibung des Videos",
                   ),
@@ -177,7 +177,7 @@ class _PremiumBereichState extends State<PremiumBereich> {
               InkWell(
                 child: Column(children: [
                   Premiumcard(
-                    title: "Warm up routine ",
+                    title: "Tag 3",
                     image: "lib/assets/13.png",
                      description: "Beschreibung des Videos",
                   ),
@@ -195,7 +195,7 @@ class _PremiumBereichState extends State<PremiumBereich> {
               InkWell(
                 child: Column(children: [
                   Premiumcard(
-                    title: "Bodyweight Workout",
+                    title: "Tag 4",
                     image: "lib/assets/93.png",
                      description: "Beschreibung des Videos",
                   ),
